@@ -1,4 +1,4 @@
-package com.coby.cobyds.element.basic
+package com.coby.cobylibrary.ui.element.basic
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -9,8 +9,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.coby.cobyds.theme.lineNormalAlternative
-import com.coby.cobyds.theme.lineNormalNormal
+import com.coby.cobylibrary.ui.theme.lineNormalAlternative
+import com.coby.cobylibrary.ui.theme.lineNormalNormal
 
 @Composable
 fun CBDivider(
@@ -45,9 +45,9 @@ fun PreviewCBDivider() {
         Spacer(modifier = Modifier.height(16.dp))
         CBDivider(isThick = true)
         Spacer(modifier = Modifier.height(16.dp))
-        Row {
-            CBDivider(vertical = true)
-            Spacer(modifier = Modifier.width(16.dp))
-        }
+        CBDivider()
+        Spacer(modifier = Modifier.height(16.dp))
+        CBDivider(isThick = true)
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
