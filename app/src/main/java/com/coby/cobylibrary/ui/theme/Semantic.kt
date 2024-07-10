@@ -5,211 +5,211 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.isSystemInDarkTheme
 
 @Composable
-fun Color.Companion.staticWhite(): Color {
-    return if (isSystemInDarkTheme()) common100 else common100
+fun Color.Companion.StaticWhite(): Color {
+    return if (isSystemInDarkTheme()) Common100 else Common100
 }
 
 @Composable
-fun Color.Companion.staticBlack(): Color {
-    return if (isSystemInDarkTheme()) common0 else common0
+fun Color.Companion.StaticBlack(): Color {
+    return if (isSystemInDarkTheme()) Common0 else Common0
 }
 
 // Label
 @Composable
-fun Color.Companion.labelNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral99 else coolNeutral10
+fun Color.Companion.LabelNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral99 else CoolNeutral10
 }
 
 @Composable
-fun Color.Companion.labelStrong(): Color {
-    return if (isSystemInDarkTheme()) common100 else common0
+fun Color.Companion.LabelStrong(): Color {
+    return if (isSystemInDarkTheme()) Common100 else Common0
 }
 
 @Composable
-fun Color.Companion.labelNeutral(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral90.copy(alpha = 0.88f) else coolNeutral22.copy(alpha = 0.88f)
+fun Color.Companion.LabelNeutral(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral90.copy(alpha = 0.88f) else CoolNeutral22.copy(alpha = 0.88f)
 }
 
 @Composable
-fun Color.Companion.labelAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral80.copy(alpha = 0.61f) else coolNeutral25.copy(alpha = 0.61f)
+fun Color.Companion.LabelAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral80.copy(alpha = 0.61f) else CoolNeutral25.copy(alpha = 0.61f)
 }
 
 @Composable
-fun Color.Companion.labelAssistive(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral80.copy(alpha = 0.28f) else coolNeutral25.copy(alpha = 0.28f)
+fun Color.Companion.LabelAssistive(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral80.copy(alpha = 0.28f) else CoolNeutral25.copy(alpha = 0.28f)
 }
 
 @Composable
-fun Color.Companion.labelDisable(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral70.copy(alpha = 0.16f) else coolNeutral25.copy(alpha = 0.16f)
+fun Color.Companion.LabelDisable(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral70.copy(alpha = 0.16f) else CoolNeutral25.copy(alpha = 0.16f)
 }
 
 // Background
 @Composable
-fun Color.Companion.backgroundNormalNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral15 else common100
+fun Color.Companion.BackgroundNormalNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral15 else Common100
 }
 
 @Composable
-fun Color.Companion.backgroundNormalAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral5 else coolNeutral99
+fun Color.Companion.BackgroundNormalAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral5 else CoolNeutral99
 }
 
 @Composable
-fun Color.Companion.backgroundElevatedNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral17 else common100
+fun Color.Companion.BackgroundElevatedNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral17 else Common100
 }
 
 @Composable
-fun Color.Companion.backgroundElevatedAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral7 else coolNeutral99
+fun Color.Companion.BackgroundElevatedAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral7 else CoolNeutral99
 }
 
 // Interaction
 @Composable
-fun Color.Companion.interactionInactive(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral40 else coolNeutral70
+fun Color.Companion.InteractionInactive(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral40 else CoolNeutral70
 }
 
 @Composable
-fun Color.Companion.interactionDisable(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral22 else coolNeutral98
+fun Color.Companion.InteractionDisable(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral22 else CoolNeutral98
 }
 
 // Line
 @Composable
-fun Color.Companion.lineNormalNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.32f) else coolNeutral50.copy(alpha = 0.22f)
+fun Color.Companion.LineNormalNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.32f) else CoolNeutral50.copy(alpha = 0.22f)
 }
 
 @Composable
-fun Color.Companion.lineNormalNeutral(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.28f) else coolNeutral50.copy(alpha = 0.16f)
+fun Color.Companion.LineNormalNeutral(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.28f) else CoolNeutral50.copy(alpha = 0.16f)
 }
 
 @Composable
-fun Color.Companion.lineNormalAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.22f) else coolNeutral50.copy(alpha = 0.08f)
+fun Color.Companion.LineNormalAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.22f) else CoolNeutral50.copy(alpha = 0.08f)
 }
 
 @Composable
-fun Color.Companion.lineSolidNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral25 else coolNeutral96
+fun Color.Companion.LineSolidNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral25 else CoolNeutral96
 }
 
 @Composable
-fun Color.Companion.lineSolidNeutral(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral23 else coolNeutral97
+fun Color.Companion.LineSolidNeutral(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral23 else CoolNeutral97
 }
 
 @Composable
-fun Color.Companion.lineSolidAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral22 else coolNeutral98
+fun Color.Companion.LineSolidAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral22 else CoolNeutral98
 }
 
 // Status
 @Composable
-fun Color.Companion.statusPositive(): Color {
-    return if (isSystemInDarkTheme()) green60 else green50
+fun Color.Companion.StatusPositive(): Color {
+    return if (isSystemInDarkTheme()) Green60 else Green50
 }
 
 @Composable
-fun Color.Companion.statusCautionary(): Color {
-    return if (isSystemInDarkTheme()) orange60 else orange50
+fun Color.Companion.StatusCautionary(): Color {
+    return if (isSystemInDarkTheme()) Orange60 else Orange50
 }
 
 @Composable
-fun Color.Companion.statusNegative(): Color {
-    return if (isSystemInDarkTheme()) red60 else red50
+fun Color.Companion.StatusNegative(): Color {
+    return if (isSystemInDarkTheme()) Red60 else Red50
 }
 
 // Accent
 @Composable
-fun Color.Companion.accentLime(): Color {
-    return if (isSystemInDarkTheme()) lime60 else lime50
+fun Color.Companion.AccentLime(): Color {
+    return if (isSystemInDarkTheme()) Lime60 else Lime50
 }
 
 @Composable
-fun Color.Companion.accentCyan(): Color {
-    return if (isSystemInDarkTheme()) cyan60 else cyan50
+fun Color.Companion.AccentCyan(): Color {
+    return if (isSystemInDarkTheme()) Cyan60 else Cyan50
 }
 
 @Composable
-fun Color.Companion.accentLightBlue(): Color {
-    return if (isSystemInDarkTheme()) lightBlue60 else lightBlue50
+fun Color.Companion.AccentLightBlue(): Color {
+    return if (isSystemInDarkTheme()) LightBlue60 else LightBlue50
 }
 
 @Composable
-fun Color.Companion.accentViolet(): Color {
-    return if (isSystemInDarkTheme()) violet60 else violet50
+fun Color.Companion.AccentViolet(): Color {
+    return if (isSystemInDarkTheme()) Violet60 else Violet50
 }
 
 @Composable
-fun Color.Companion.accentPurple(): Color {
-    return if (isSystemInDarkTheme()) purple60 else purple50
+fun Color.Companion.AccentPurple(): Color {
+    return if (isSystemInDarkTheme()) Purple60 else Purple50
 }
 
 @Composable
-fun Color.Companion.accentPink(): Color {
-    return if (isSystemInDarkTheme()) pink60 else pink50
+fun Color.Companion.AccentPink(): Color {
+    return if (isSystemInDarkTheme()) Pink60 else Pink50
 }
 
 // Inverse
 @Composable
-fun Color.Companion.inversePrimary(): Color {
-    return if (isSystemInDarkTheme()) blue50 else blue60
+fun Color.Companion.InversePrimary(): Color {
+    return if (isSystemInDarkTheme()) Blue50 else Blue60
 }
 
 @Composable
-fun Color.Companion.inverseBackground(): Color {
-    return if (isSystemInDarkTheme()) common100 else coolNeutral15
+fun Color.Companion.InverseBackground(): Color {
+    return if (isSystemInDarkTheme()) Common100 else CoolNeutral15
 }
 
 @Composable
-fun Color.Companion.inverseLabel(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral10 else coolNeutral99
+fun Color.Companion.InverseLabel(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral10 else CoolNeutral99
 }
 
 // Fill
 @Composable
-fun Color.Companion.fillNormal(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.22f) else coolNeutral50.copy(alpha = 0.08f)
+fun Color.Companion.FillNormal(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.22f) else CoolNeutral50.copy(alpha = 0.08f)
 }
 
 @Composable
-fun Color.Companion.fillStrong(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.28f) else coolNeutral50.copy(alpha = 0.16f)
+fun Color.Companion.FillStrong(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.28f) else CoolNeutral50.copy(alpha = 0.16f)
 }
 
 @Composable
-fun Color.Companion.fillAlternative(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral50.copy(alpha = 0.12f) else coolNeutral50.copy(alpha = 0.05f)
+fun Color.Companion.FillAlternative(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral50.copy(alpha = 0.12f) else CoolNeutral50.copy(alpha = 0.05f)
 }
 
 // Material
 @Composable
-fun Color.Companion.meterialDimmer(): Color {
-    return if (isSystemInDarkTheme()) coolNeutral10.copy(alpha = 0.74f) else coolNeutral10.copy(alpha = 0.52f)
+fun Color.Companion.MeterialDimmer(): Color {
+    return if (isSystemInDarkTheme()) CoolNeutral10.copy(alpha = 0.74f) else CoolNeutral10.copy(alpha = 0.52f)
 }
 
 // Shadow
 @Composable
-fun Color.Companion.shadowNormal(): Color {
-    return if (isSystemInDarkTheme()) staticWhite().copy(alpha = 0.16f) else staticBlack().copy(alpha = 0.16f)
+fun Color.Companion.ShadowNormal(): Color {
+    return if (isSystemInDarkTheme()) StaticWhite().copy(alpha = 0.16f) else StaticBlack().copy(alpha = 0.16f)
 }
 
 @Composable
-fun Color.Companion.shadowEmphasize(): Color {
-    return if (isSystemInDarkTheme()) staticWhite().copy(alpha = 0.22f) else staticBlack().copy(alpha = 0.22f)
+fun Color.Companion.ShadowEmphasize(): Color {
+    return if (isSystemInDarkTheme()) StaticWhite().copy(alpha = 0.22f) else StaticBlack().copy(alpha = 0.22f)
 }
 
 @Composable
-fun Color.Companion.shadowStrong(): Color {
-    return if (isSystemInDarkTheme()) staticWhite().copy(alpha = 0.22f) else staticBlack().copy(alpha = 0.22f)
+fun Color.Companion.ShadowStrong(): Color {
+    return if (isSystemInDarkTheme()) StaticWhite().copy(alpha = 0.22f) else StaticBlack().copy(alpha = 0.22f)
 }
 
 @Composable
-fun Color.Companion.shadowHeavy(): Color {
-    return if (isSystemInDarkTheme()) staticWhite().copy(alpha = 0.28f) else staticBlack().copy(alpha = 0.28f)
+fun Color.Companion.ShadowHeavy(): Color {
+    return if (isSystemInDarkTheme()) StaticWhite().copy(alpha = 0.28f) else StaticBlack().copy(alpha = 0.28f)
 }

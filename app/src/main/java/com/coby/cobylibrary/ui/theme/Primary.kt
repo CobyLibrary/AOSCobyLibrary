@@ -5,116 +5,116 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.isSystemInDarkTheme
 
 @Composable
-fun Color.Companion.blueNormal(): Color {
-    return if (isSystemInDarkTheme()) blue60 else blue50
+fun Color.Companion.BlueNormal(): Color {
+    return if (isSystemInDarkTheme()) Blue60 else Blue50
 }
 
 @Composable
-fun Color.Companion.blueStrong(): Color {
-    return if (isSystemInDarkTheme()) blue55 else blue45
+fun Color.Companion.BlueStrong(): Color {
+    return if (isSystemInDarkTheme()) Blue55 else Blue45
 }
 
 @Composable
-fun Color.Companion.blueHeavy(): Color {
-    return if (isSystemInDarkTheme()) blue50 else blue40
+fun Color.Companion.BlueHeavy(): Color {
+    return if (isSystemInDarkTheme()) Blue50 else Blue40
 }
 
 @Composable
-fun Color.Companion.redNormal(): Color {
-    return if (isSystemInDarkTheme()) red60 else red50
+fun Color.Companion.RedNormal(): Color {
+    return if (isSystemInDarkTheme()) Red60 else Red50
 }
 
 @Composable
-fun Color.Companion.redHeavy(): Color {
-    return if (isSystemInDarkTheme()) red50 else red40
+fun Color.Companion.RedHeavy(): Color {
+    return if (isSystemInDarkTheme()) Red50 else Red40
 }
 
 @Composable
-fun Color.Companion.greenNormal(): Color {
-    return if (isSystemInDarkTheme()) green60 else green50
+fun Color.Companion.GreenNormal(): Color {
+    return if (isSystemInDarkTheme()) Green60 else Green50
 }
 
 @Composable
-fun Color.Companion.greenHeavy(): Color {
-    return if (isSystemInDarkTheme()) green50 else green40
+fun Color.Companion.GreenHeavy(): Color {
+    return if (isSystemInDarkTheme()) Green50 else Green40
 }
 
 @Composable
-fun Color.Companion.orangeNormal(): Color {
-    return if (isSystemInDarkTheme()) orange60 else orange50
+fun Color.Companion.OrangeNormal(): Color {
+    return if (isSystemInDarkTheme()) Orange60 else Orange50
 }
 
 @Composable
-fun Color.Companion.orangeHeavy(): Color {
-    return if (isSystemInDarkTheme()) orange50 else orange40
+fun Color.Companion.OrangeHeavy(): Color {
+    return if (isSystemInDarkTheme()) Orange50 else Orange40
 }
 
 @Composable
-fun Color.Companion.redOrangeNormal(): Color {
-    return if (isSystemInDarkTheme()) redOrange60 else redOrange50
+fun Color.Companion.RedOrangeNormal(): Color {
+    return if (isSystemInDarkTheme()) RedOrange60 else RedOrange50
 }
 
 @Composable
-fun Color.Companion.redOrangeHeavy(): Color {
-    return if (isSystemInDarkTheme()) redOrange50 else redOrange40
+fun Color.Companion.RedOrangeHeavy(): Color {
+    return if (isSystemInDarkTheme()) RedOrange50 else RedOrange40
 }
 
 @Composable
-fun Color.Companion.limeNormal(): Color {
-    return if (isSystemInDarkTheme()) lime60 else lime50
+fun Color.Companion.LimeNormal(): Color {
+    return if (isSystemInDarkTheme()) Lime60 else Lime50
 }
 
 @Composable
-fun Color.Companion.limeHeavy(): Color {
-    return if (isSystemInDarkTheme()) lime50 else lime40
+fun Color.Companion.LimeHeavy(): Color {
+    return if (isSystemInDarkTheme()) Lime50 else Lime40
 }
 
 @Composable
-fun Color.Companion.cyanNormal(): Color {
-    return if (isSystemInDarkTheme()) cyan60 else cyan50
+fun Color.Companion.CyanNormal(): Color {
+    return if (isSystemInDarkTheme()) Cyan60 else Cyan50
 }
 
 @Composable
-fun Color.Companion.cyanHeavy(): Color {
-    return if (isSystemInDarkTheme()) cyan50 else cyan40
+fun Color.Companion.CyanHeavy(): Color {
+    return if (isSystemInDarkTheme()) Cyan50 else Cyan40
 }
 
 @Composable
-fun Color.Companion.lightBlueNormal(): Color {
-    return if (isSystemInDarkTheme()) lightBlue60 else lightBlue50
+fun Color.Companion.LightBlueNormal(): Color {
+    return if (isSystemInDarkTheme()) LightBlue60 else LightBlue50
 }
 
 @Composable
-fun Color.Companion.lightBlueHeavy(): Color {
-    return if (isSystemInDarkTheme()) lightBlue50 else lightBlue40
+fun Color.Companion.LightBlueHeavy(): Color {
+    return if (isSystemInDarkTheme()) LightBlue50 else LightBlue40
 }
 
 @Composable
-fun Color.Companion.violetNormal(): Color {
-    return if (isSystemInDarkTheme()) violet60 else violet50
+fun Color.Companion.VioletNormal(): Color {
+    return if (isSystemInDarkTheme()) Violet60 else Violet50
 }
 
 @Composable
-fun Color.Companion.violetHeavy(): Color {
-    return if (isSystemInDarkTheme()) violet50 else violet40
+fun Color.Companion.VioletHeavy(): Color {
+    return if (isSystemInDarkTheme()) Violet50 else Violet40
 }
 
 @Composable
-fun Color.Companion.purpleNormal(): Color {
-    return if (isSystemInDarkTheme()) purple60 else purple50
+fun Color.Companion.PurpleNormal(): Color {
+    return if (isSystemInDarkTheme()) Purple60 else Purple50
 }
 
 @Composable
-fun Color.Companion.purpleHeavy(): Color {
-    return if (isSystemInDarkTheme()) purple50 else purple40
+fun Color.Companion.PurpleHeavy(): Color {
+    return if (isSystemInDarkTheme()) Purple50 else Purple40
 }
 
 @Composable
-fun Color.Companion.pinkNormal(): Color {
-    return if (isSystemInDarkTheme()) pink60 else pink50
+fun Color.Companion.PinkNormal(): Color {
+    return if (isSystemInDarkTheme()) Pink60 else Pink50
 }
 
 @Composable
-fun Color.Companion.pinkHeavy(): Color {
-    return if (isSystemInDarkTheme()) pink50 else pink40
+fun Color.Companion.PinkHeavy(): Color {
+    return if (isSystemInDarkTheme()) Pink50 else Pink40
 }

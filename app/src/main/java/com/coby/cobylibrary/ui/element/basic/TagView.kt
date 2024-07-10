@@ -12,19 +12,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.coby.cobylibrary.ui.theme.backgroundNormalNormal
-import com.coby.cobylibrary.ui.theme.fillStrong
-import com.coby.cobylibrary.ui.theme.labelNeutral
-import com.coby.cobylibrary.ui.theme.lineNormalNeutral
+import com.coby.cobylibrary.ui.theme.BackgroundNormalNormal
+import com.coby.cobylibrary.ui.theme.FillStrong
+import com.coby.cobylibrary.ui.theme.LabelNeutral
+import com.coby.cobylibrary.ui.theme.LineNormalNeutral
 
 @Composable
 fun TagView(
     isSelected: Boolean = false,
     title: String,
-    tagColor: Color = Color.fillStrong(),
-    labelColor: Color = Color.labelNeutral()
+    tagColor: Color = Color.FillStrong(),
+    labelColor: Color = Color.LabelNeutral()
 ) {
-    val backgroundColor = if (isSelected) tagColor else Color.backgroundNormalNormal()
+    val backgroundColor = if (isSelected) tagColor else Color.BackgroundNormalNormal()
 
     Text(
         text = title,
@@ -34,7 +34,7 @@ fun TagView(
         modifier = Modifier
             .padding(horizontal = 12.dp, vertical = 8.dp)
             .background(color = backgroundColor, shape = RoundedCornerShape(8.dp))
-            .border(width = 1.dp, color = Color.lineNormalNeutral(), shape = RoundedCornerShape(8.dp))
+            .border(width = 1.dp, color = Color.LineNormalNeutral(), shape = RoundedCornerShape(8.dp))
     )
 }
 

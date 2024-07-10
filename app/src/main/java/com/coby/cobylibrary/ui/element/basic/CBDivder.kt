@@ -9,15 +9,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.coby.cobylibrary.ui.theme.lineNormalAlternative
-import com.coby.cobylibrary.ui.theme.lineNormalNormal
+import com.coby.cobylibrary.ui.theme.LineNormalAlternative
+import com.coby.cobylibrary.ui.theme.LineNormalNormal
 
 @Composable
 fun CBDivider(
     isThick: Boolean = false,
     vertical: Boolean = false
 ) {
-    val color: Color = if (!isThick) Color.lineNormalNormal() else Color.lineNormalAlternative()
+    val color: Color = if (!isThick) Color.LineNormalNormal() else Color.LineNormalAlternative()
     val height: Dp = if (!isThick) 1.dp else 12.dp
 
     if (vertical) {
