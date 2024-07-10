@@ -1,6 +1,7 @@
 package com.coby.cobylibrary.ui.element.list
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -20,11 +21,13 @@ import com.coby.cobylibrary.ui.theme.*
 fun RadioListItemWithColor(
     isChecked: Boolean,
     color: Color,
-    title: String
+    title: String,
+    action: () -> Unit
 ) {
     Row(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .clickable(onClick = action),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(
@@ -67,12 +70,16 @@ fun PreviewRadioListItemWithColor() {
             isChecked = true,
             color = Color.Red40,
             title = "제목"
-        )
+        ) {
+            println("클릭")
+        }
 
         RadioListItemWithColor(
             isChecked = false,
             color = Color.Blue40,
             title = "제목"
-        )
+        ) {
+            println("클릭")
+        }
     }
 }

@@ -23,7 +23,6 @@ fun SettingListItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 12.dp)
             .clickable(onClick = action),
         verticalAlignment = Alignment.CenterVertically
     ) {

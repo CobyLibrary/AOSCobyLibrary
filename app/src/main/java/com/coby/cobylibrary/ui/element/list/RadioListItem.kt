@@ -1,5 +1,6 @@
 package com.coby.cobylibrary.ui.element.list
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -16,11 +17,13 @@ import com.coby.cobylibrary.ui.theme.*
 @Composable
 fun RadioListItem(
     isChecked: Boolean,
-    title: String
+    title: String,
+    action: () -> Unit
 ) {
     Row(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .clickable(onClick = action),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -49,10 +52,15 @@ fun RadioListItem(
 @Composable
 fun PreviewRadioListItem() {
     Column(
-        modifier = Modifier.padding(horizontal = 16.dp),
+        modifier = Modifier.padding(horizontal = 20.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        RadioListItem(isChecked = true, title = "체크")
-        RadioListItem(isChecked = false, title = "체크")
+        RadioListItem(isChecked = true, title = "체크") {
+            println("클릭")
+        }
+
+        RadioListItem(isChecked = false, title = "체크") {
+            println("클릭")
+        }
     }
 }

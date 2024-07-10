@@ -51,7 +51,7 @@ fun CheckListItem(
 @Composable
 fun PreviewCheckListItem() {
     Column(
-        modifier = Modifier.padding(horizontal = 16.dp),
+        modifier = Modifier.padding(horizontal = 20.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         val isChecked1 = remember { mutableStateOf(true) }
