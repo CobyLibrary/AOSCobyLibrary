@@ -41,7 +41,7 @@ fun ThumbnailTileView(
                 color = if (isSelected) isSelectedBorderColor else Color.LineNormalNeutral(),
                 shape = RoundedCornerShape(12.dp)
             )
-            .padding(start = 12.dp, top = 12.dp, bottom = 12.dp, end = 16.dp)
+            .padding(12.dp)
     ) {
         ThumbnailView(
             modifier = Modifier.size(64.dp),
@@ -55,7 +55,7 @@ fun ThumbnailTileView(
             horizontalAlignment = Alignment.Start,
             modifier = Modifier
                 .weight(1f)
-                .padding(end = 16.dp)
+                .padding(end = 4.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -105,7 +105,7 @@ fun PreviewThumbnailTileView() {
             isSelected = true,
             image = painterResource(id = R.drawable.ic_image),
             title = "title",
-            subTitle = "date",
+            subTitle = "22.12.12",
             description = "description"
         )
 
