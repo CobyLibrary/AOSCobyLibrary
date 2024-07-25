@@ -14,7 +14,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.coby.cobylibrary.R
 import com.coby.cobylibrary.ui.theme.*
 
@@ -31,60 +30,62 @@ fun TopBarView(
     rightIcon: Int? = null,
     rightAction: () -> Unit = {}
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(
-                when (barType) {
-                    BarType.TransParents -> Color.Transparent
-                    else -> Color.BackgroundNormalNormal()
-                }
-            )
-            .height(56.dp)
-        ,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
+    Box {
         Row(
-            modifier = Modifier.weight(1f),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            BarContentView(
-                contentType = leftSide,
-                title = leftTitle,
-                icon = leftIcon,
-                action = leftAction
-            )
-            Spacer(modifier = Modifier.weight(1f))
-        }
-
-        Text(
-            text = title,
-            style = Typography.titleMedium,
-            color = Color.LabelNormal()
-        )
-
-        Row(
-            modifier = Modifier.weight(1f),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.End
-        ) {
-            Spacer(modifier = Modifier.weight(1f))
-            BarContentView(
-                contentType = rightSide,
-                title = rightTitle,
-                icon = rightIcon,
-                action = rightAction
-            )
-        }
-    }
-
-    if (barType == BarType.Underlined) {
-        Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(1.dp)
-                .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f))
-        )
+                .background(
+                    when (barType) {
+                        BarType.TransParents -> Color.Transparent
+                        else -> Color.BackgroundNormalNormal()
+                    }
+                )
+                .height(56.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Row(
+                modifier = Modifier.weight(1f),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                BarContentView(
+                    contentType = leftSide,
+                    title = leftTitle,
+                    icon = leftIcon,
+                    action = leftAction
+                )
+                Spacer(modifier = Modifier.weight(1f))
+            }
+
+            Text(
+                text = title,
+                style = Typography.titleMedium,
+                color = Color.LabelNormal()
+            )
+
+            Row(
+                modifier = Modifier.weight(1f),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.End
+            ) {
+                Spacer(modifier = Modifier.weight(1f))
+                BarContentView(
+                    contentType = rightSide,
+                    title = rightTitle,
+                    icon = rightIcon,
+                    action = rightAction
+                )
+            }
+        }
+
+        if (barType == BarType.Underlined) {
+            Box(
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f))
+            )
+        }
     }
 }
 
@@ -154,7 +155,9 @@ fun BarContentView(
                     modifier = Modifier
                         .padding(horizontal = BaseSize.horizontalPadding - 8.dp)
                         .background(
-                            Color.InverseBackground().copy(alpha = 0.7f),
+                            Color
+                                .InverseBackground()
+                                .copy(alpha = 0.7f),
                             CircleShape
                         )
                         .padding(4.dp)
@@ -204,7 +207,7 @@ fun TopBarPreview() {
         )
 
         TopBarView(
-            barType = BarType.Underlined,
+            barType = BarType.TransParents,
             leftSide = ContentType.Title,
             leftTitle = "확인",
             title = "제목",
