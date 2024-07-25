@@ -34,14 +34,15 @@ fun TopBarView(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .height(56.dp)
             .background(
                 when (barType) {
                     BarType.TransParents -> Color.Transparent
                     else -> Color.BackgroundNormalNormal()
                 }
             )
-            .statusBarsPadding(),
+            .statusBarsPadding()
+            .height(56.dp)
+        ,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(
@@ -52,8 +53,7 @@ fun TopBarView(
                 contentType = leftSide,
                 title = leftTitle,
                 icon = leftIcon,
-                action = leftAction,
-                barType = barType
+                action = leftAction
             )
             Spacer(modifier = Modifier.weight(1f))
         }
@@ -74,8 +74,7 @@ fun TopBarView(
                 contentType = rightSide,
                 title = rightTitle,
                 icon = rightIcon,
-                action = rightAction,
-                barType = barType
+                action = rightAction
             )
         }
     }
@@ -95,8 +94,7 @@ fun BarContentView(
     contentType: ContentType,
     title: String = "",
     icon: Int? = null,
-    action: () -> Unit = {},
-    barType: BarType
+    action: () -> Unit = {}
 ) {
     when (contentType) {
         ContentType.None -> {
