@@ -40,7 +40,8 @@ fun TopBarView(
                     BarType.TransParents -> Color.Transparent
                     else -> Color.BackgroundNormalNormal()
                 }
-            ),
+            )
+            .statusBarsPadding(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(
