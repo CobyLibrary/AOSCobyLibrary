@@ -40,7 +40,6 @@ fun TopBarView(
                     else -> Color.BackgroundNormalNormal()
                 }
             )
-            .statusBarsPadding()
             .height(56.dp)
         ,
         verticalAlignment = Alignment.CenterVertically
