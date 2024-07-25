@@ -62,11 +62,11 @@ dependencies {
 afterEvaluate {
     publishing {
         publications {
-            register<MavenPublication>("release") {
+            create<MavenPublication>("maven") {
                 from(components["release"])
                 groupId = "com.github.CobyLibrary"
                 artifactId = "CobyLibrary"
-                version = "1.0.0"
+                version = "1.0.2"
             }
         }
     }
