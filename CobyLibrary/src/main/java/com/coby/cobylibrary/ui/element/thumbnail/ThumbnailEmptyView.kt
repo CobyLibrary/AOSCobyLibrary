@@ -2,6 +2,7 @@ package com.coby.cobylibrary.ui.element.thumbnail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
@@ -15,11 +16,15 @@ import com.coby.cobylibrary.R
 import com.coby.cobylibrary.ui.theme.*
 
 @Composable
-fun ThumbnailEmptyView() {
+fun ThumbnailEmptyView(
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
-            .background(Color.FillStrong()),
+            .background(Color.FillStrong())
+            .clickable { onClick() },
         contentAlignment = Alignment.Center
     ) {
         Icon(
@@ -38,18 +43,14 @@ fun PreviewThumbnailEmptyView() {
         modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Box(modifier = Modifier.size(100.dp)) {
-            ThumbnailEmptyView()
-        }
+        ThumbnailEmptyView(modifier = Modifier.size(100.dp))
 
-        Box(modifier = Modifier.size(150.dp)) {
-            ThumbnailEmptyView()
-        }
+        ThumbnailEmptyView(modifier = Modifier.size(150.dp))
 
-        Box(modifier = Modifier
-            .width(300.dp)
-            .height(150.dp)) {
-            ThumbnailEmptyView()
-        }
+        ThumbnailEmptyView(
+            modifier = Modifier
+                .width(300.dp)
+                .height(150.dp)
+        )
     }
 }

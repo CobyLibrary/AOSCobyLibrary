@@ -3,6 +3,7 @@ package com.coby.cobylibrary.ui.element.thumbnail
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -25,14 +26,16 @@ import com.coby.cobylibrary.ui.theme.*
 fun ThumbnailView(
     modifier: Modifier = Modifier,
     image: Painter? = null,
-    isShadowing: Boolean = false
+    isShadowing: Boolean = false,
+    onClick: () -> Unit = {}
 ) {
     Box(
         modifier = modifier
             .clip(RoundedCornerShape(12.dp))
             .background(Color.FillNormal())
             .then(if (isShadowing) Modifier.shadow(8.dp, RoundedCornerShape(12.dp)) else Modifier)
-            .border(1.dp, Color.LineNormalNeutral(), RoundedCornerShape(12.dp)),
+            .border(1.dp, Color.LineNormalNeutral(), RoundedCornerShape(12.dp))
+            .clickable { onClick() },
         contentAlignment = Alignment.Center
     ) {
         if (image != null) {
@@ -43,7 +46,10 @@ fun ThumbnailView(
                 contentScale = ContentScale.Crop
             )
         } else {
-            ThumbnailEmptyView()
+            ThumbnailEmptyView(
+                modifier = modifier,
+                onClick = onClick
+            )
         }
     }
 }
@@ -55,23 +61,20 @@ fun PreviewThumbnailView() {
         modifier = Modifier.padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Box(modifier = Modifier.size(100.dp)) {
-            ThumbnailView(
-                image = painterResource(id = R.drawable.ic_image),
-                isShadowing = true
-            )
-        }
+        ThumbnailView(
+            modifier = Modifier.size(100.dp),
+            image = painterResource(id = R.drawable.ic_image),
+            isShadowing = true
+        ) {}
 
-        Box(modifier = Modifier.size(200.dp, 150.dp)) {
-            ThumbnailView(
-                image = painterResource(id = R.drawable.ic_image)
-            )
-        }
+        ThumbnailView(
+            modifier = Modifier.size(200.dp, 150.dp),
+            image = painterResource(id = R.drawable.ic_image)
+        ) {}
 
-        Box(modifier = Modifier.size(300.dp, 150.dp)) {
-            ThumbnailView(
-                image = painterResource(id = R.drawable.ic_image)
-            )
-        }
+        ThumbnailView(
+            modifier = Modifier.size(300.dp, 150.dp),
+            image = painterResource(id = R.drawable.ic_image)
+        ) {}
     }
 }

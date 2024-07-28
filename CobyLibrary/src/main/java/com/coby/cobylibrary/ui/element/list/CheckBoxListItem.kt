@@ -18,17 +18,18 @@ import com.coby.cobylibrary.ui.theme.LabelNormal
 
 @Composable
 fun CheckBoxListItem(
-    isChecked: MutableState<Boolean>,
-    title: String
+    isChecked: Boolean,
+    title: String,
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { isChecked.value = !isChecked.value },
+            .clickable { onClick() },
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        val imageRes = if (isChecked.value) {
+        val imageRes = if (isChecked) {
             R.drawable.ic_checkbox_on
         } else {
             R.drawable.ic_checkbox_off
@@ -60,7 +61,15 @@ fun PreviewCheckBoxListItem() {
         val isChecked1 = remember { mutableStateOf(true) }
         val isChecked2 = remember { mutableStateOf(false) }
 
-        CheckBoxListItem(isChecked = isChecked1, title = "동의합니다.")
-        CheckBoxListItem(isChecked = isChecked2, title = "동의합니다.")
+        CheckBoxListItem(
+            isChecked = isChecked1.value,
+            title = "동의합니다.",
+            onClick = {}
+        )
+        CheckBoxListItem(
+            isChecked = isChecked2.value,
+            title = "동의합니다.",
+            onClick = {}
+        )
     }
 }

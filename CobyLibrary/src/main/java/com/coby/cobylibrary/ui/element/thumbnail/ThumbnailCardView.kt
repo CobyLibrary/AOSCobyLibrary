@@ -1,6 +1,7 @@
 package com.coby.cobylibrary.ui.element.thumbnail
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -24,7 +25,8 @@ fun ThumbnailCardView(
     image: Painter? = null,
     title: String,
     description: String,
-    isShadowing: Boolean = false
+    isShadowing: Boolean = false,
+    onClick: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -36,6 +38,7 @@ fun ThumbnailCardView(
                 shape = RoundedCornerShape(12.dp),
                 clip = false
             )
+            .clickable { onClick() }
     ) {
         ThumbnailView(
             modifier = Modifier.fillMaxSize(),
@@ -99,12 +102,12 @@ fun PreviewThumbnailCardView() {
             image = painterResource(id = R.drawable.ic_image),
             title = "전주에서",
             description = "철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다"
-        )
+        ) {}
 
         ThumbnailCardView(
             image = painterResource(id = R.drawable.ic_image),
             title = "전주에서",
             description = "철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다철길입니다"
-        )
+        ) {}
     }
 }

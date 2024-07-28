@@ -2,6 +2,7 @@ package com.coby.cobylibrary.ui.element.thumbnail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -28,12 +29,14 @@ fun ThumbnailTitleView(
     image: Painter? = null,
     title: String,
     description: String? = null,
-    isShadowing: Boolean = false
+    isShadowing: Boolean = false,
+    onClick: () -> Unit
 ) {
     Column(
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
             .fillMaxWidth()
+            .clickable { onClick() }
     ) {
         ThumbnailView(
             modifier = Modifier
@@ -79,10 +82,10 @@ fun PreviewThumbnailTitleView() {
             image = painterResource(id = R.drawable.ic_image),
             title = "제목입니다만",
             description = "사진에 대한 설명이에요"
-        )
+        ) {}
 
         ThumbnailTitleView(
             title = "제목입니다만"
-        )
+        ) {}
     }
 }

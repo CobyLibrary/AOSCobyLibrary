@@ -18,12 +18,12 @@ import com.coby.cobylibrary.ui.theme.*
 fun RadioListItem(
     isChecked: Boolean,
     title: String,
-    action: () -> Unit
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = action),
+            .clickable { onClick() },
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(

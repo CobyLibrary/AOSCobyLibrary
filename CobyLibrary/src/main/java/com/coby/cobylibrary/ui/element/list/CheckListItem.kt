@@ -19,17 +19,18 @@ import com.coby.cobylibrary.ui.theme.Typography
 
 @Composable
 fun CheckListItem(
-    isChecked: MutableState<Boolean>,
-    title: String
+    isChecked: Boolean,
+    title: String,
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { isChecked.value = !isChecked.value },
+            .clickable { onClick() },
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        val tintColor = if (isChecked.value) Color.LabelNeutral() else Color.LabelDisable()
+        val tintColor = if (isChecked) Color.LabelNeutral() else Color.LabelDisable()
 
         Icon(
             painter = painterResource(id = R.drawable.ic_check),
@@ -57,7 +58,16 @@ fun PreviewCheckListItem() {
         val isChecked1 = remember { mutableStateOf(true) }
         val isChecked2 = remember { mutableStateOf(false) }
 
-        CheckListItem(isChecked = isChecked1, title = "동의합니다.")
-        CheckListItem(isChecked = isChecked2, title = "동의합니다.")
+        CheckListItem(
+            isChecked = isChecked1.value,
+            title = "동의합니다.",
+            onClick = {}
+        )
+
+        CheckListItem(
+            isChecked = isChecked2.value,
+            title = "동의합니다.",
+            onClick = {}
+        )
     }
 }

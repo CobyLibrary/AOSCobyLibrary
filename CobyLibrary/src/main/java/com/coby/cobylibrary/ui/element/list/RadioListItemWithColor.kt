@@ -22,12 +22,12 @@ fun RadioListItemWithColor(
     isChecked: Boolean,
     color: Color,
     title: String,
-    action: () -> Unit
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = action),
+            .clickable { onClick() },
         verticalAlignment = Alignment.CenterVertically
     ) {
         Row(

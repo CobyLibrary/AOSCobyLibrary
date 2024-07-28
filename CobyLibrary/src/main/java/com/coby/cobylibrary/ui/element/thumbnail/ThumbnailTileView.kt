@@ -3,6 +3,7 @@ package com.coby.cobylibrary.ui.element.thumbnail
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -29,7 +30,8 @@ fun ThumbnailTileView(
     title: String,
     subTitle: String? = null,
     description: String,
-    isSelectedBorderColor: Color = Color.BlueNormal()
+    isSelectedBorderColor: Color = Color.BlueNormal(),
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier
@@ -42,6 +44,7 @@ fun ThumbnailTileView(
                 shape = RoundedCornerShape(12.dp)
             )
             .padding(12.dp)
+            .clickable { onClick() }
     ) {
         ThumbnailView(
             modifier = Modifier.size(64.dp),
@@ -107,7 +110,7 @@ fun PreviewThumbnailTileView() {
             title = "title",
             subTitle = "22.12.12",
             description = "description"
-        )
+        ) {}
 
         ThumbnailTileView(
             isSelected = false,
@@ -115,6 +118,6 @@ fun PreviewThumbnailTileView() {
             title = "title",
             subTitle = "date",
             description = "description"
-        )
+        ) {}
     }
 }

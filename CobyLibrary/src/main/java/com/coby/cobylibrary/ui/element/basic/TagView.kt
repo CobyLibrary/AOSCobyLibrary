@@ -2,6 +2,7 @@ package com.coby.cobylibrary.ui.element.basic
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -22,7 +23,8 @@ fun TagView(
     isSelected: Boolean = false,
     title: String,
     tagColor: Color = Color.FillStrong(),
-    labelColor: Color = Color.LabelNeutral()
+    labelColor: Color = Color.LabelNeutral(),
+    onClick: () -> Unit
 ) {
     val backgroundColor = if (isSelected) tagColor else Color.BackgroundNormalNormal()
 
@@ -35,11 +37,16 @@ fun TagView(
             .padding(horizontal = 12.dp, vertical = 8.dp)
             .background(color = backgroundColor, shape = RoundedCornerShape(8.dp))
             .border(width = 1.dp, color = Color.LineNormalNeutral(), shape = RoundedCornerShape(8.dp))
+            .clickable { onClick() }
     )
 }
 
 @Preview
 @Composable
 fun PreviewTagView() {
-    TagView(isSelected = true, title = "태그")
+    TagView(
+        isSelected = true,
+        title = "태그",
+        onClick = {}
+    )
 }
