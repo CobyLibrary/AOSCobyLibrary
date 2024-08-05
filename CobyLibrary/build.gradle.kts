@@ -66,7 +66,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.CobyLibrary"
                 artifactId = "CobyLibrary"
-                version = "1.0.8"
+                version = "1.0.9"
             }
         }
     }

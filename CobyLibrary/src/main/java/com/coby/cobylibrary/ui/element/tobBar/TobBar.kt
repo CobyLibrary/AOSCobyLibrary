@@ -106,8 +106,8 @@ fun BarContentView(
                 style = Typography.titleLarge,
                 color = Color.LabelNormal(),
                 modifier = Modifier
-                    .padding(horizontal = BaseSize.horizontalPadding)
                     .clickable { action() }
+                    .padding(horizontal = BaseSize.horizontalPadding)
             )
         }
         ContentType.Text -> {
@@ -116,8 +116,8 @@ fun BarContentView(
                 style = Typography.titleSmall,
                 color = Color.LabelNormal(),
                 modifier = Modifier
-                    .padding(horizontal = BaseSize.horizontalPadding)
                     .clickable { action() }
+                    .padding(horizontal = BaseSize.horizontalPadding)
             )
         }
         ContentType.Left -> {
@@ -128,8 +128,8 @@ fun BarContentView(
                     tint = Color.LabelNormal(),
                     modifier = Modifier
                         .size(24.dp)
-                        .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
                         .clickable { action() }
+                        .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
@@ -140,9 +140,9 @@ fun BarContentView(
                     contentDescription = null,
                     tint = Color.LabelNormal(),
                     modifier = Modifier
-                        .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
                         .size(24.dp)
                         .clickable { action() }
+                        .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
@@ -153,7 +153,6 @@ fun BarContentView(
                     contentDescription = null,
                     tint = Color.InverseLabel(),
                     modifier = Modifier
-                        .padding(horizontal = BaseSize.horizontalPadding - 8.dp)
                         .background(
                             Color
                                 .InverseBackground()
@@ -163,6 +162,7 @@ fun BarContentView(
                         .padding(4.dp)
                         .size(24.dp)
                         .clickable { action() }
+                        .padding(horizontal = BaseSize.horizontalPadding - 8.dp)
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
