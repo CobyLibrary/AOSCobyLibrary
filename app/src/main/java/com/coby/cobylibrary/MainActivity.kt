@@ -36,9 +36,18 @@ fun TopBarPreview() {
     Column {
         TopBarView(
             barType = BarType.Underlined,
-            leftSide = ContentType.Text,
-            leftTitle = "확인",
+            leftSide = ContentType.Left,
             title = "제목"
+        )
+
+        TopBarView(
+            barType = BarType.TransParents,
+            leftSide = ContentType.Title,
+            leftTitle = "확인",
+            title = "제목",
+            rightSide = ContentType.Icon,
+            rightIcon = R.drawable.ic_forward,
+            rightAction = { }
         )
 
         TopBarView(

@@ -2,12 +2,15 @@ package com.coby.cobylibrary.ui.element.basic
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -106,7 +109,6 @@ fun BarContentView(
                 style = Typography.titleLarge,
                 color = Color.LabelNormal(),
                 modifier = Modifier
-                    .clickable { action() }
                     .padding(horizontal = BaseSize.horizontalPadding)
             )
         }
@@ -116,8 +118,12 @@ fun BarContentView(
                 style = Typography.titleSmall,
                 color = Color.LabelNormal(),
                 modifier = Modifier
-                    .clickable { action() }
                     .padding(horizontal = BaseSize.horizontalPadding)
+                    .clickable(
+                        onClick = { action() },
+                        indication = rememberRipple(bounded = false),
+                        interactionSource = remember { MutableInteractionSource() }
+                    )
             )
         }
         ContentType.Left -> {
@@ -127,9 +133,13 @@ fun BarContentView(
                     contentDescription = null,
                     tint = Color.LabelNormal(),
                     modifier = Modifier
-                        .size(24.dp)
-                        .clickable { action() }
                         .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
+                        .size(24.dp)
+                        .clickable(
+                            onClick = { action() },
+                            indication = rememberRipple(bounded = false),
+                            interactionSource = remember { MutableInteractionSource() }
+                        )
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
@@ -140,9 +150,13 @@ fun BarContentView(
                     contentDescription = null,
                     tint = Color.LabelNormal(),
                     modifier = Modifier
-                        .size(24.dp)
-                        .clickable { action() }
                         .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
+                        .size(24.dp)
+                        .clickable(
+                            onClick = { action() },
+                            indication = rememberRipple(bounded = false),
+                            interactionSource = remember { MutableInteractionSource() }
+                        )
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
@@ -153,6 +167,7 @@ fun BarContentView(
                     contentDescription = null,
                     tint = Color.InverseLabel(),
                     modifier = Modifier
+                        .padding(horizontal = BaseSize.horizontalPadding - 8.dp)
                         .background(
                             Color
                                 .InverseBackground()
@@ -162,7 +177,6 @@ fun BarContentView(
                         .padding(4.dp)
                         .size(24.dp)
                         .clickable { action() }
-                        .padding(horizontal = BaseSize.horizontalPadding - 8.dp)
                 )
             } ?: Spacer(modifier = Modifier.size(40.dp))
         }
