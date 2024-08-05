@@ -33,12 +33,12 @@ fun ThumbnailCardView(
             .fillMaxWidth()
             .aspectRatio(1.25f)
             .clip(RoundedCornerShape(12.dp))
+            .clickable { onClick() }
             .shadow(
                 elevation = if (isShadowing) 8.dp else 0.dp,
                 shape = RoundedCornerShape(12.dp),
                 clip = false
             )
-            .clickable { onClick() }
     ) {
         ThumbnailView(
             modifier = Modifier.fillMaxSize(),

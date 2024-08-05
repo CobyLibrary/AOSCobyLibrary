@@ -34,9 +34,9 @@ fun TagView(
         fontWeight = FontWeight.Normal,
         color = labelColor,
         modifier = Modifier
-            .padding(horizontal = 12.dp, vertical = 8.dp)
             .background(color = backgroundColor, shape = RoundedCornerShape(8.dp))
             .border(width = 1.dp, color = Color.LineNormalNeutral(), shape = RoundedCornerShape(8.dp))
+            .padding(horizontal = 12.dp, vertical = 8.dp)
             .clickable { onClick() }
     )
 }
