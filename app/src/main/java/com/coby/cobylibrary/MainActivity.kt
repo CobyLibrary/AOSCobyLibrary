@@ -34,10 +34,11 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TopBarPreview() {
     Column {
+        TopBarView()
+
         TopBarView(
-            barType = BarType.Underlined,
-            leftSide = ContentType.Left,
-            title = "제목"
+            leftSide = ContentType.Icon,
+            leftIcon = R.drawable.ic_forward,
         )
 
         TopBarView(

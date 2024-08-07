@@ -127,21 +127,19 @@ fun BarContentView(
             )
         }
         ContentType.Left -> {
-            icon?.let {
-                Icon(
-                    painter = painterResource(id = it),
-                    contentDescription = null,
-                    tint = Color.LabelNormal(),
-                    modifier = Modifier
-                        .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
-                        .size(24.dp)
-                        .clickable(
-                            onClick = { action() },
-                            indication = rememberRipple(bounded = false),
-                            interactionSource = remember { MutableInteractionSource() }
-                        )
-                )
-            } ?: Spacer(modifier = Modifier.size(40.dp))
+            Icon(
+                painter = painterResource(id = R.drawable.ic_back),
+                contentDescription = null,
+                tint = Color.LabelNormal(),
+                modifier = Modifier
+                    .padding(horizontal = BaseSize.horizontalPadding - 4.dp)
+                    .size(24.dp)
+                    .clickable(
+                        onClick = { action() },
+                        indication = rememberRipple(bounded = false),
+                        interactionSource = remember { MutableInteractionSource() }
+                    )
+            )
         }
         ContentType.Icon -> {
             icon?.let {
@@ -195,12 +193,7 @@ enum class BarType {
 @Composable
 fun TopBarPreview() {
     Column {
-        TopBarView(
-            barType = BarType.Underlined,
-            leftSide = ContentType.Text,
-            leftTitle = "확인",
-            title = "제목"
-        )
+        TopBarView()
 
         TopBarView(
             barType = BarType.TransParents,
